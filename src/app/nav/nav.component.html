@@ -1,0 +1,66 @@
+<!-- Header -->
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                    <div class="logo"><a routerLink="/" routerLinkActive="active"><img src="../../assets/images/stories-logo.png" height="45"/></a></div>
+                    <!-- <div class="logo"><a href="index.html">Stories</a></div> -->
+                    <nav class="main_nav">
+                        <ul>
+                            <li><a [routerLink]="['/topic', 'creativity']" routerLinkActive="active">Creativity</a></li>
+                            <li><a [routerLink]="['/topic', 'innovation']" routerLinkActive="active">Innovation</a></li>
+                            <li><a [routerLink]="['/topic', 'science']" routerLinkActive="active">Science</a></li>
+                            <li><a [routerLink]="['/topic', 'mathematics']" routerLinkActive="active">Mathematics</a></li>
+                            <li><a [routerLink]="['/topic','geography']" routerLinkActive="active">Geography</a></li>
+                            <li><a [routerLink]="['/topic', 'history']" routerLinkActive="active">History</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search_container ml-auto">
+                        <form action="#">
+                            <input type="search" class="header_search_input" required="required" placeholder="Type to Search...">
+                            <img class="header_search_icon" src="../../assets/images/search_2.png" alt="">
+                        </form>
+                    </div>
+                    <div class="hamburger ml-auto menu_mm">
+                        <i class="fa fa-bars trans_200 menu_mm" aria-hidden="true"></i>
+                    </div>
+                    <nav class="main_nav right">
+                        <ul>
+                            <li><a [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
+                            <li><a [routerLink]="['/signup']" routerLinkActive="active">Sign Up</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Menu -->
+
+<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+    <div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+    <div class="logo menu_mm"><a href="#">Stories</a></div>
+    <div class="search">
+        <form action="#">
+            <input type="search" class="header_search_input menu_mm" required="required" placeholder="Type to Search...">
+            <img class="header_search_icon menu_mm" src="../../assets/images/search_2.png" alt="">
+        </form>
+    </div>
+    <nav class="menu_nav">
+        <ul class="menu_mm">
+            <li class="menu_mm"><a href="index.html">home</a></li>
+            <li class="menu_mm"><a href="#">Creativity</a></li>
+            <li class="menu_mm"><a href="#">Science</a></li>
+            <li class="menu_mm"><a href="#">History</a></li>
+            <li class="menu_mm"><a href="#">Geography</a></li>
+            <li class="menu_mm"><a href="#">Mathematics</a></li>
+        </ul>
+        <ul class="menu_mm">
+            <li class="menu_mm"><a href="#">Login</a></li>
+            <li class="menu_mm"><a href="#">Sign Up</a></li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,111 @@
+******************************/
+
+/*********************************
+2. Body and some general stuff
+*********************************/
+
+*
+{
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+div
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul
+{
+	list-style: none;
+	margin-bottom: 0px;
+}
+.signup-page, .login-page{
+    padding: 2.5rem 0;
+    font-family: 'Work Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	background: #f7f7f7;
+    color: #a5a5a5;
+    background-color: #593F86;
+    z-index: 990;
+}
+p
+{
+	font-family: 'Work Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.45;
+	font-weight: 500;
+	color: rgba(0,0,0,0.5);
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+/* 
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
+} 
+*/
+
+.form-control{
+    background-color: #eee;
+    border-radius:0;
+    color:#495057;
+    border:transparent;
+    width: 100%;
+}
+
+.custom-select{
+    border-radius:0;
+    border: transparent;
+}
+
+.btn-signup, .btn-login{
+    border-radius: 0;
+}
+
+.signup-card, .login-card{
+    border:0;
+    border-radius: 0;
+    width:21rem;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+}
+
+.signup-page .card-title, .login-page .card-title{
+    font-size: 18px;
+	font-weight: 600;
+	color: rgba(0,0,0,1);
+}

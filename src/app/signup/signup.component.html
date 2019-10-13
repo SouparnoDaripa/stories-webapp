@@ -1,0 +1,49 @@
+<section class="signup-page">
+    <div class="container">
+        <div class="card signup-card">
+                <article class="card-body mx-auto" style="max-width: 400px;">
+                    <h4 class="card-title mt-3 text-center">Sign Up</h4>
+                    <form>
+                    <div class="form-group input-group">
+                        <input name="" class="form-control" placeholder="First name" type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <input name="" class="form-control" placeholder="Last name" type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <input name="" class="form-control" placeholder="Username" type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <input name="" class="form-control" placeholder="Email address" type="email">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <select class="custom-select" [ngStyle]="{'width': '24%'}">
+                            <option style="width: 30px;" value="+91">+91</option>
+                        </select>
+                        <input name="" [ngStyle]="{width:'75%' ,float:'right'}" class="form-control" placeholder="Phone number" type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group" id="birthDate">
+                        <input name="" data-provide="datepicker" class="form-control" placeholder="Date Of Birth" type="text"> 
+                    </div> <!-- form-group end.// -->
+                    <div class="form-group input-group">
+                        <select class="form-control">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div> <!-- form-group end.// -->
+                    <div class="form-group input-group">
+                        <input class="form-control" placeholder="Password" type="password">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <input class="form-control" placeholder="Confirm password" type="password">
+                    </div> <!-- form-group// -->                                      
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-signup btn-primary btn-block"> Create Account  </button>
+                    </div> <!-- form-group// -->      
+                    <p class="text-center">Have an account? <a [routerLink]="['/login']">Log In</a> </p>                                                                 
+                    </form>
+                </article>
+        </div>
+    </div>
+</section>    

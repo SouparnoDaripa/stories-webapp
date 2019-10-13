@@ -1,0 +1,143 @@
+<!-- Home -->
+
+<div class="home">
+		
+    <!-- Home Slider -->
+
+    <div class="home_slider_container">
+        <div class="owl-carousel owl-theme home_slider">
+
+            <!-- Slider Item -->
+            <div class="owl-item">
+                <div class="home_slider_background" [ngStyle]="{'background-image':'url(../../assets/images/' + allBlogs[0].blogImage + ')'}"></div>
+                <div class="home_slider_content_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="home_slider_content">
+                                    <div class="home_slider_item_topic trans_200"><a [routerLink]="['/topic', allBlogs[0].category]" routerLinkActive="active" class="trans_200">{{allBlogs[0].category}}</a></div>
+                                    <div class="home_slider_item_title">
+                                        <a [routerLink]="['/story', allBlogs[0].shortLink]" routerLinkActive="active">{{allBlogs[0].title}}</a>
+                                    </div>
+                                    <div class="home_slider_item_link">
+                                        <a [routerLink]="['/story', allBlogs[0].shortLink]" routerLinkActive="active" class="trans_200">Continue Reading
+                                            <svg version="1.1" id="link_arrow_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 width="19px" height="13px" viewBox="0 0 19 13" enable-background="new 0 0 19 13" xml:space="preserve">
+                                                <polygon fill="#FFFFFF" points="12.475,0 11.061,0 17.081,6.021 0,6.021 0,7.021 17.038,7.021 11.06,13 12.474,13 18.974,6.5 "/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Page Content -->
+
+<div class="page_content">
+    <div class="container">
+        <div class="row row-lg-eq-height">
+
+            <!-- Main Content -->
+
+            <div class="col-lg-9">
+                <div class="main_content">
+
+                    <!-- Blog Section - Don't Miss -->
+
+                    <div class="blog_section">
+                        <div class="section_panel d-flex flex-row align-items-center justify-content-start">
+                            <div class="section_title">Latest Stories..</div>
+                            <div class="section_tags ml-auto">
+                                <ul>
+                                    <li class="active"><a [routerLink]="['/topic', 'all']" routerLinkActive="active">all</a></li>
+                                    <li><a [routerLink]="['/topic', 'creativity']" routerLinkActive="active">Creativity</a></li>
+                                    <li><a [routerLink]="['/topic', 'innovation']" routerLinkActive="active">Innovation</a></li>
+                                    <li><a [routerLink]="['/topic', 'science']" routerLinkActive="active">Science</a></li>
+                                    <li><a [routerLink]="['/topic', 'mathematics']" routerLinkActive="active">Mathematics</a></li>
+                                </ul>
+                            </div>
+                            <div class="section_panel_more">
+                                <ul>
+                                    <li>more
+                                        <ul>
+                                            <li><a [routerLink]="['/topic','geography']" routerLinkActive="active">Geography</a></li>
+                                            <li><a [routerLink]="['/topic', 'history']" routerLinkActive="active">History</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section_content">
+                            <div class="grid clearfix">
+
+                                <!-- Largest Card With Image -->
+                                <div class="card card_largest_with_image grid-item">
+                                    <img class="card-img-top" src="../../assets/images/{{allBlogs[2].blogImage}}" alt="">
+                                    <div class="card-body">
+                                        <div class="card-title"><a [routerLink]="['/story', allBlogs[2].shortLink]" routerLinkActive="active">{{allBlogs[2].title}}</a></div>
+                                        <!-- <p class="card-text"></p> -->
+                                        <small class="post_meta"><a href="#">{{allBlogs[2].author}}</a><span>Mar 29, 2019 at 9:48 am</span></small>
+                                    </div>
+                                </div>
+
+                                <!-- Small Card With Background -->
+                                <div class="card card_default card_small_with_background grid-item">
+                                    <div class="card_background" [ngStyle]="{'background-image':'url(../../assets/images/' + allBlogs[4].blogImage + ')'}"></div>
+                                    <div class="card-body">
+                                        <div class="card-title card-title-small"><a [routerLink]="['/story', allBlogs[4].shortLink]" routerLinkActive="active">{{allBlogs[4].title}}</a></div>
+                                        <small class="post_meta"><a href="#">{{allBlogs[4].author}}</a><span>Mar 29, 2019 at 9:48 am</span></small>
+                                    </div>
+                                </div>
+
+                                <!-- Small Card With Image -->
+                                <div class="card card_small_with_image grid-item">
+                                    <img class="card-img-top" src="../../assets/images/{{allBlogs[3].blogImage}}" alt="">
+                                    <div class="card-body">
+                                        <div class="card-title card-title-small"><a [routerLink]="['/story', allBlogs[3].shortLink]" routerLinkActive="active">{{allBlogs[3].title}}</a></div>
+                                        <small class="post_meta"><a href="#">{{allBlogs[3].author}}</a><span>Mar 29, 2019 at 9:48 am</span></small>
+                                    </div>
+                                </div>
+
+                                <!-- Default Card No Image -->
+
+                                <div class="card card_default card_default_no_image grid-item">
+                                    <div class="card-body">
+                                        <div class="card-title card-title-small"><a [routerLink]="['/story', allBlogs[4].shortLink]" routerLinkActive="active">Creativity is a human quality that exists in every single one</a></div>
+                                    </div>
+                                </div>
+
+                                <!-- Default Card No Image -->
+
+                                <div class="card card_default card_default_no_image grid-item">
+                                    <div class="card-body">
+                                        <div class="card-title card-title-small"><a [routerLink]="['/story', allBlogs[4].shortLink]" routerLinkActive="active">Creativity is a human quality that exists in every single one</a></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="load_more">
+                    <div id="load_more" class="load_more_button text-center trans_200">Load More</div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+
+            <div class="col-lg-3">
+                <app-sidebar-popular></app-sidebar-popular>
+            </div>
+
+        </div>
+    </div>
+</div>

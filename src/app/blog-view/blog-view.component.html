@@ -1,0 +1,75 @@
+<div class="home">
+    <div ngNonBindable><div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../assets/images/{{currentBlog.blogImage}}" data-speed="0.8"></div></div>
+    <div class="home_content">
+        <div class="post_category trans_200"><a [routerLink]="['/topic', currentBlog.category]" routerLinkActive="active" class="trans_200">{{currentBlog.category}}</a></div>
+        <div class="post_title">{{currentBlog.title}}</div>
+    </div>
+</div>
+
+<!-- Page Content -->
+
+<div class="page_content">
+    <div class="container" *ngIf ="currentBlog">
+        <div class="row row-lg-eq-height justify-content-center">
+
+            <!-- Post Content -->
+
+            <div class="col-lg-9">
+                <div class="post_content">
+
+                    <!-- Top Panel -->
+                    <div class="post_panel post_panel_top d-flex flex-row align-items-center justify-content-start">
+                        <div class="author_image"><div><img src="../../assets/images/author.jpg" alt=""></div></div>
+                        <div class="post_meta"><a href="#">{{currentBlog.author}}</a><span>Mar 29, 2019 at 9:48 am</span></div>
+                        <div class="post_share ml-sm-auto">
+                            <span>share</span>
+                            <ul class="post_share_list">
+                                <li class="post_share_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="post_share_item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="post_share_item"><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Post Body -->
+
+                    <div class="post_body">
+                       <div class="post_para" [innerHtml] = "currentBlog.bodyHtml">
+                       </div>
+                        <!-- Post Tags -->
+                        <div class="post_tags">
+                            <ul>
+                                <li class="post_tag" *ngFor="let tag of currentBlog.tags"><a [routerLink]="['/tag', tag]">{{tag}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Panel -->
+                    <div class="post_panel bottom_panel d-flex flex-row align-items-center justify-content-start">
+                        <div class="author_image"><div><img src="../../assets/images/author.jpg" alt=""></div></div>
+                        <div class="post_meta"><a href="#">{{currentBlog.author}}</a><span>Mar 29, 2019 at 9:48 am</span></div>
+                        <div class="post_share ml-sm-auto">
+                            <span>share</span>
+                            <ul class="post_share_list">
+                                <li class="post_share_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="post_share_item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="post_share_item"><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Similar Posts -->
+                    <div class="similar_posts">
+                        <app-blog-similar></app-blog-similar>
+                    </div>
+
+                    <!-- Comments -->
+                    <div class="post_comments">
+                        <app-blog-comments></app-blog-comments>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
